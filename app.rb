@@ -5,8 +5,8 @@ include PayPal::SDK::OpenIDConnect
 
 get "/" do
   redirect Tokeninfo.authorize_url({
-    scope: "openid profile email address phone https://uri.paypal.com/services/paypalattributes https://uri.paypal.com/services/expresscheckout",
-    redirect_uri: "http://127.0.0.1:4567/callback"
+    scope: "openid profile",
+    redirect_uri: "http://127.0.0.1:9292/callback"
   })
 end
 
